@@ -102,7 +102,7 @@ class StarterSite extends Site {
 	}
 
 	/**
-	 * his would return 'foo bar!'.
+	 * This would return 'foo bar!'.
 	 *
 	 * @param string $text being 'foo', then returned 'foo bar!'.
 	 */
@@ -133,7 +133,7 @@ class StarterSite extends Site {
 	 *
 	 * @link https://twig.symfony.com/doc/2.x/api.html#environment-options
 	 *
-	 * \@param array $options An array of environment options.
+	 * @param array $options An array of environment options.
 	 *
 	 * @return array
 	 */
