@@ -1,7 +1,7 @@
 # The Timber Starter Theme
 
 [![Build Status](https://travis-ci.com/timber/starter-theme.svg?branch=master)](https://travis-ci.com/github/timber/starter-theme)
-[![Packagist Version](https://img.shields.io/packagist/v/upstatement/timber-starter-theme?include_prereleases)](https://packagist.org/packages/upstatement/timber-starter-theme)
+[![Packagist Version](https://img.shields.io/packagist/v/timber/starter-theme?include_prereleases)](https://packagist.org/packages/timber/starter-theme)
 
 The "_s" for Timber: a dead-simple theme that you can build from. The primary purpose of this theme is to provide a file structure rather than a framework for markup or styles. Configure your SASS files, scripts, and task runners however you would like!
 
