@@ -31,13 +31,13 @@ class TestTimberStarterTheme extends BaseTestCase {
 
 	function testFunctionsPHP() {
 		$context = Timber::context();
-		$this->assertEquals('StarterSite', get_class($context['site']));
+		$this->assertEquals('App\StarterSite', get_class($context['site']));
 		$this->assertTrue(current_theme_supports('post-thumbnails'));
 		$this->assertEquals('bar', $context['foo']);
 	}
 
 	function testLoading() {
-		$str = Timber::compile('tease.twig');
+		$str = Timber::compile('partials/tease.twig');
 		$this->assertStringStartsWith('<article class="tease tease-" id="tease-">', $str);
 		$this->assertStringEndsWith('</article>', $str);
 	}
@@ -46,7 +46,8 @@ class TestTimberStarterTheme extends BaseTestCase {
 	 * Helper test to output current twig version
 	 */
 	function testTwigVersion() {
-		// $version = Timber::compile_string("{{ version }}", [ 'version', Twig\Environment::VERSION ]);
+		$version = Timber::compile_string("{{ version }}", [ 'version' => Twig\Environment::VERSION ]);
+		$this->assertEquals(Twig\Environment::VERSION, $version);
 	}
 
 	function testTwigFilter() {
