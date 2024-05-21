@@ -7,7 +7,7 @@
 
 use Timber\Timber;
 
-$templates = array('search.twig', 'archive.twig', 'index.twig');
+$templates = array( 'templates/search.twig', 'templates/archive.twig', 'templates/index.twig' );
 
 $context = Timber::context([
    'title' => 'Search results for ' . get_search_query(),
