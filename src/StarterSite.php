@@ -37,6 +37,20 @@ class StarterSite extends Site
 	{
 	}
 
+	/** 
+	 * Function to register menus 
+	 */
+    public function register_my_menus() {
+        register_nav_menus(
+            array(
+				'top-menu' => __('Top Menu'),
+                'main-menu' => __('Main Menu'),
+                'social-menu' => __('Social Menu'),
+            )
+        );
+    }
+
+
 	/**
 	 * This is where you add some context
 	 *
@@ -106,6 +120,17 @@ class StarterSite extends Site
 		);
 
 		add_theme_support('menus');
+
+		/*
+		 * Set the height and width of our logo.
+		 *
+		 */
+		add_theme_support('custom-logo', array(
+            'height'      => 83,   // Set the desired height here
+            'width'       => 203, // Set the desired width here
+            'flex-height' => true,
+            'flex-width'  => true,
+        ));
 
 		/*
 		 * Enable support for Woocommerce.
