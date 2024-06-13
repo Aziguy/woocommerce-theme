@@ -106,6 +106,14 @@ class StarterSite extends Site
 		);
 
 		add_theme_support('menus');
+
+		/*
+		 * Enable support for Woocommerce.
+		 *
+		 * See: https://timber.github.io/docs/v2/guides/woocommerce/
+		 */
+		add_theme_support('woocommerce');
+
 	}
 
 	/**
