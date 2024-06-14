@@ -1,12 +1,118 @@
-{% if menu %}
-    <ul>
-        {% for item in items %}
-            <li class="{{ item.classes|join(' ') }}">
-                <a target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
-                {% include 'partials/menu.twig' with {
-                    items: item.children
-                } %}
-            </li>
-        {% endfor %}
-    </ul>
-{% endif %}
+<!-- Menu ******************************* -->
+<div class="theme_menu color1_bg">
+	<div class="container">
+		<nav class="menuzord pull-left" id="main_menu">
+			<ul class="menuzord-menu">
+				<li class="current_page">
+					<a href="index.html">Home</a>
+				</li>
+				<li>
+					<a href="about-us.html">About us</a>
+				</li>
+				<li>
+					<a href="#">store</a>
+					<ul class="dropdown">
+						<li>
+							<a href="shop.html">Shop With Sidebar</a>
+						</li>
+						<li>
+							<a href="shop-single.html">Product Detail</a>
+						</li>
+						<li>
+							<a href="shop-cart.html">Cart Page</a>
+						</li>
+						<li>
+							<a href="checkout.html">Checkout Page</a>
+						</li>
+						<li>
+							<a href="account.html">My Account</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">News</a>
+					<ul class="dropdown">
+						<li>
+							<a href="blog-Standard.html">News Standard</a>
+						</li>
+						<li>
+							<a href="blog-list-sidebar.html">News With Sidebar</a>
+						</li>
+						<li>
+							<a href="blog-grid.html">News Masonary</a>
+						</li>
+						<li>
+							<a href="blog-details.html">News Single</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">gallery</a>
+					<ul class="dropdown">
+						<li>
+							<a href="gallery-grid.html">Gallery Grid</a>
+						</li>
+						<li>
+							<a href="gallery-masonry.html">Gallery Masonary</a>
+						</li>
+						<li>
+							<a href="gallery-single.html">Gallery Single</a>
+						</li>
+					</ul>
+				</li>
+
+				<li>
+					<a href="#">Pages</a>
+					<ul class="dropdown">
+						<li>
+							<a href="Testimonials.html">Testimonials</a>
+						</li>
+						<li>
+							<a href="404.html">404v page</a>
+						</li>
+						<li>
+							<a href="faq.html">FAQ</a>
+						</li>
+					</ul>
+				</li>
+
+				<li>
+					<a href="contact.html">Contact us</a>
+				</li>
+			</ul>
+			<!-- End of .menuzord-menu -->
+		</nav>
+		<!-- End of #main_menu -->
+
+
+		<!-- ******* Cart And Search Option ******** -->
+		<div class="nav_side_content pull-right">
+			<ul class="icon_header">
+				<li class="border_round tran3s">
+					<a href="#">
+						<i class="fa fa-facebook"></i>
+					</a>
+				</li>
+				<li class="border_round tran3s">
+					<a href="#">
+						<i class="fa fa-twitter"></i>
+					</a>
+				</li>
+				<li class="border_round tran3s">
+					<a href="#">
+						<i class="fa fa-google-plus"></i>
+					</a>
+				</li>
+				<li class="border_round tran3s">
+					<a href="#">
+						<i class="fa fa-pinterest"></i>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!-- End of .nav_side_content -->
+
+	</div>
+	<!-- End of .conatiner -->
+</div>
+<!-- End of .theme_menu -->
