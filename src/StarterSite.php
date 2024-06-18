@@ -2,14 +2,20 @@
 
 namespace App;
 
+// Path to our Breadcrumb class file
+require_once get_template_directory() . '/inc/woo-breadcrumbs.php';
+
 use Timber\Site;
 use Timber\Timber;
+use App\WOO_Breadcrumbs;
 
 /**
  * Class StarterSite
  */
 class StarterSite extends Site
 {
+	protected $custom_woo_breadcrumbs;   // A property to hold the custom breadcrumb instance
+
 	public function __construct()
 	{
 		add_action('after_setup_theme', array($this, 'theme_supports'));
@@ -23,6 +29,9 @@ class StarterSite extends Site
 		add_filter('timber/context', array($this, 'add_to_context'));
 		add_filter('timber/twig', array($this, 'add_to_twig'));
 		add_filter('timber/twig/environment/options', [$this, 'update_twig_environment_options']);
+
+		// Instantiate our ATGC custom breadcrumb class
+		$this->custom_woo_breadcrumbs = new WOO_Breadcrumbs();
 
 		parent::__construct();
 	}
@@ -62,7 +71,9 @@ class StarterSite extends Site
 	 */
 	public function add_to_context($context)
 	{
-		//$context['breadcrumbs'] = $breadcrumbs;
+		// Function to generate breadcrumbs
+        $breadcrumbs = WOO_Breadcrumbs::woo_generate_breadcrumbs();
+		$context['breadcrumbs'] = $breadcrumbs;
 		$context['custom_wp_title'] = wp_title('', false);
 		$context['logo'] = wp_get_attachment_image_src(get_theme_mod('custom_logo'), 'full');
 		$context['tagline'] = get_bloginfo('description');
