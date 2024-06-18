@@ -1,0 +1,13 @@
+{% extends 'layouts/base.twig' %}
+
+{% block content %}
+	{% include 'views/partials/home/banner.twig' with {items: menu.get_items} %}
+	{% include 'views/partials/home/about.twig' with {items: menu.get_items} %}
+	{% include 'views/partials/home/feature.twig' with {items: menu.get_items} %}
+	{% include 'views/partials/home/why-choose-us.twig' with {items: menu.get_items} %}
+	{% include 'views/partials/home/gallery.twig' with {items: menu.get_items} %}
+	{% include 'views/partials/home/news.twig' with {items: menu.get_items} %}
+	{% include 'views/partials/home/our-services.twig' with {items: menu.get_items} %}
+	{% include 'views/partials/home/testimonials.twig' with {items: menu.get_items} %}
+	{% include 'views/partials/home/partners.twig' with {items: menu.get_items} %}
+{% endblock %}

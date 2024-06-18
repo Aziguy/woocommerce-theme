@@ -1,0 +1,54 @@
+<section class="breadcrumb-area" style="background-image:url({{ theme.link }}/assets/images/background/2.jpg);">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="breadcrumbs text-center">
+					{% if custom_wp_title %}
+						{% if 'Search Results' in custom_wp_title %}
+							{% set searchTerm = custom_wp_title|split('Search Results')|last|trim %}
+							{% if searchTerm %}
+								<h4 class="heading">Recherche pour :
+									{{ searchTerm }}</h4>
+							{% endif %}
+						{% else %}
+							<h4 class="heading">{{ custom_wp_title | raw }}</h4>
+						{% endif %}
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="breadcrumb-bottom-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-md-5 col-sm-5">
+					<ul>
+						<li>
+							<a href="#">Home</a>
+						</li>
+						<li>
+							<a href="">
+								<i class="fa fa-angle-right"></i>
+							</a>
+						</li>
+						<li>
+							<a href="#">Gallery</a>
+						</li>
+						<li>
+							<a href="">
+								<i class="fa fa-angle-right"></i>
+							</a>
+						</li>
+						<li>about us</li>
+					</ul>
+				</div>
+				<div class="col-lg-4 col-md-7 col-sm-7">
+					<p>We provide
+						<span>100% organic</span>
+						products</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</section>
